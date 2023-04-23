@@ -1,2 +1,3 @@
-print(1123456)
-print(3)
+import RPi.GPIO as RP
+
+def dec2bin(value):
