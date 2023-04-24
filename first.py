@@ -13,3 +13,14 @@ try:
         if a = 'q':
             break
         elif a.isdigit() and int(a) % 1 == 0 and 0 <= int(a) <= 255:
+            RP.output(dac, dec2bin(int(a)))
+            print("{:.4f".format((int(a)/256)*3.3))
+        else:
+            print("input number [0, 255]")
+except ValueError:
+    print("input number [0, 255]")
+except KeyboardInterrupt:
+    print('OK')
+finally:
+    RP.output(dac, 0)
+    RP.cleanup()
