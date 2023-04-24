@@ -10,7 +10,7 @@ RP.setmode(dac, RP.OUT)
 try:
     while True:
         a = input()
-        if a = 'q':
+        if a == 'q':
             break
         elif a.isdigit() and int(a) % 1 == 0 and 0 <= int(a) <= 255:
             RP.output(dac, dec2bin(int(a)))
